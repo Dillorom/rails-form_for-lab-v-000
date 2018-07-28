@@ -1,3 +1,4 @@
 class StudentsController < ApplicationController
-  def 
+  def show
+  end
 end
