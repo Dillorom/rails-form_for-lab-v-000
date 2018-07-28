@@ -538,3 +538,22 @@ Processing by SchoolClassesController#edit as HTML
   [1m[36mSchoolClass Load (0.1ms)[0m  [1mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT 1[0m  [["id", 1]]
   Rendered school_classes/edit.html.erb within layouts/application (0.3ms)
 Completed 200 OK in 13ms (Views: 11.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/school_classes/1/edit" for 73.254.230.154 at 2018-07-28 22:42:05 +0000
+Processing by SchoolClassesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSchoolClass Load (0.2ms)[0m  SELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered school_classes/edit.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 15ms (Views: 13.6ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/school_classes/1" for 73.254.230.154 at 2018-07-28 22:42:09 +0000
+Processing by SchoolClassesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vJ9Qpk520mMAHo+tSqHDKpLSXh3VkB5HrupaK0FDfjvLVq3qulPq1qaYGkoHb6a6Hk4IEvSgOiOVLx/l78W25Q==", "school_class"=>{"title"=>"asdf", "room_number"=>"0asdf"}, "commit"=>"Update School class", "id"=>"1"}
+  [1m[36mSchoolClass Load (0.2ms)[0m  [1mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "school_classes" SET "room_number" = ? WHERE "school_classes"."id" = ?[0m  [["room_number", 0], ["id", 1]]
+  [1m[35m (4.2ms)[0m  commit transaction
+Redirected to http://165.227.31.156:49332/school_classes/1
+Completed 302 Found in 9ms (ActiveRecord: 4.8ms)
