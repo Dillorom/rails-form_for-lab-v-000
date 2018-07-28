@@ -7,6 +7,10 @@ class SchoolClassesController < ApplicationController
     @school_class = SchoolClass.find(params[:id])
   end
 
+  def new
+    @school_class = SchooClass.new
+  end
+
   def create
     @school_class = SchoolClass.new(params.require(:school_class).permit(:title, :room_number))
     @school_class.save
