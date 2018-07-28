@@ -276,3 +276,15 @@ ActionController::RoutingError (No route matches [POST] "/students"):
   Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.5ms)
   Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
   Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (61.9ms)
+
+
+Started POST "/students" for 73.254.230.154 at 2018-07-28 22:10:54 +0000
+Processing by StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/F3HIETUIUG3UagjhsJgR5NmFzfjS3YDY8RGBdJ3w5iLlDpssPEZ9BHXPcTLDAXXH/pBOMJ7UmdYAQPLfPELRg==", "student"=>{"first_name"=>"test", "last_name"=>"asdf"}, "commit"=>"Create Student"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `pry' for #<Binding:0x007f87c2461c38>
+Did you mean?  try):
+  app/controllers/students_controller.rb:15:in `create'
+
+
