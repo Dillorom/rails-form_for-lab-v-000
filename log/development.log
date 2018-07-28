@@ -512,3 +512,13 @@ ActionController::RoutingError (No route matches [POST] "/school_classes"):
   Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.4ms)
   Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
   Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (51.3ms)
+
+
+Started POST "/school_classes" for 73.254.230.154 at 2018-07-28 22:40:53 +0000
+Processing by SchoolClassesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jSDHNUWOlFhuTjZKgQ9VLPWVSzbhzGUJvMc8WShWGGb66Tp5saus7cjIo63MwTC8eQkdOcD8QW2HAnmXhtDQuA==", "school_class"=>{"title"=>"asdf", "room_number"=>"asdf"}, "commit"=>"Create School class"}
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "school_classes" ("title", "room_number") VALUES (?, ?)  [["title", "asdf"], ["room_number", 0]]
+  [1m[36m (2.5ms)[0m  [1mcommit transaction[0m
+Redirected to http://165.227.31.156:49332/school_classes/1
+Completed 302 Found in 10ms (ActiveRecord: 4.0ms)
