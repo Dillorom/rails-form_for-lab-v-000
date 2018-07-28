@@ -13,6 +13,9 @@ class SchoolClassesController < ApplicationController
     redirect_to school_class_path(@school_class)
   end
 
+  def edit
+  end
+
   def update
       @school_class = SchoolClass.find(params[:id])
       @school_class.update(params.require(:school_class).permit(:title, :room_number))
