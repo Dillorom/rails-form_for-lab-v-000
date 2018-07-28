@@ -316,3 +316,15 @@ LoadError (cannot load such file -- pry):
   Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
   Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
   Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (36.8ms)
+
+
+Started GET "/students/new" for 73.254.230.154 at 2018-07-28 22:11:54 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StudentsController#new as HTML
+  Rendered students/new.html.erb within layouts/application (20.0ms)
+Completed 200 OK in 284ms (Views: 261.7ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/students" for 73.254.230.154 at 2018-07-28 22:11:58 +0000
+Processing by StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iXKmXsACQ1uMA5ubkaQfuPBetV+4Y65M1n0mv24DY7j+u1sSNCd77iqFDnzcanoofMLjUJlTiijtuGNxwIWrZg==", "student"=>{"first_name"=>"sdf", "last_name"=>"asdf"}, "commit"=>"Create Student"}
